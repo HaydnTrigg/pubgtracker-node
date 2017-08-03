@@ -1,0 +1,19 @@
+{
+  "name": "pubgtracker-node",
+  "version": "1.0.0",
+  "description": "PUBG Tracker Network API wrapper for NodeJS",
+  "main": "api.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HaydnTrigg/pubgtracker-node.git"
+  },
+  "author": "Haydn Trigg",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HaydnTrigg/pubgtracker-node/issues"
+  },
+  "homepage": "https://github.com/HaydnTrigg/pubgtracker-node#readme"
+}
