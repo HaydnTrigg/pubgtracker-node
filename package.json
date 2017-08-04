@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/HaydnTrigg/pubgtracker-node/issues"
   },
-  "homepage": "https://github.com/HaydnTrigg/pubgtracker-node#readme"
+  "homepage": "https://github.com/HaydnTrigg/pubgtracker-node#readme",
+  "dependencies": {
+    "bottleneck": "^1.16.0",
+    "request-async": "^0.1.0",
+    "request-promise-native": "^1.0.4"
+  }
 }
