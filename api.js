@@ -15,7 +15,7 @@ class PubgTracker {
    * Retrieve the account of a player via their StreamID
    * @param {string} id The 64bit SteamID as a string
    */
-  getPlayerByStreamID64(id) {
+  getPlayerByStreamID64(id, priority) {
     const options = {
       url: `https://pubgtracker.com/api/search?steamId=${id}`,
       headers: {
@@ -23,10 +23,19 @@ class PubgTracker {
       },
       json: true
     };
-    return request.get(options)
+
+    return new Promise((resolve, reject) => {
+      this.limiter.submitPriority(priority || 5, async (options) => {
+        try {
+          resolve(await request.get(options))
+        } catch(err) {
+          reject(err)
+        }
+      }, options)
+    })
   }
 
-  getStatsByNickname(nickname) {
+  getStatsByNickname(nickname, priority) {
     const options = {
       url: `https://pubgtracker.com/api/profile/pc/${nickname}`,
       headers: {
@@ -34,7 +43,16 @@ class PubgTracker {
       },
       json: true
     };
-    return request.get(options)
+
+    return new Promise((resolve, reject) => {
+      this.limiter.submitPriority(priority || 5, async (options) => {
+        try {
+          resolve(await request.get(options))
+        } catch(err) {
+          reject(err)
+        }
+      }, options)
+    })
   }
 }
 
