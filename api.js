@@ -17,7 +17,7 @@ class PubgTracker {
    */
   getPlayerByStreamID64(id, priority) {
     const options = {
-      url: `https://pubgtracker.com/api/search?steamId=${id}`,
+      uri: `https://pubgtracker.com/api/search?steamId=${id}`,
       headers: {
         'TRN-Api-Key': this.api_key
       },
@@ -37,7 +37,7 @@ class PubgTracker {
 
   getStatsByNickname(nickname, priority) {
     const options = {
-      url: `https://pubgtracker.com/api/profile/pc/${nickname}`,
+      uri: `https://pubgtracker.com/api/profile/pc/${nickname}`,
       headers: {
         'TRN-Api-Key': this.api_key
       },
