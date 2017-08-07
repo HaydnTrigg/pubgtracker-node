@@ -18,7 +18,6 @@
   "homepage": "https://github.com/HaydnTrigg/pubgtracker-node#readme",
   "dependencies": {
     "bottleneck": "^1.16.0",
-    "request": "^2.81.0",
-    "request-promise-native": "^1.0.4"
+    "request": "^2.81.0"
   }
 }

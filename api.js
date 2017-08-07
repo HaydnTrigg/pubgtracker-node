@@ -1,5 +1,5 @@
 const Bottleneck = require("bottleneck");
-const request = require("request-promise-native");
+const request = require("request");
 
 
 class PubgTracker {
