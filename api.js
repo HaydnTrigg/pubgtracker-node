@@ -15,6 +15,7 @@ class PubgTracker {
    * @param {string} id The 64bit SteamID as a string
    */
   getPlayerByStreamID64(id) {
+	if(!id || typeof id !== 'string') throw new Error('id is invalid')
 
     const options = {
       url: `https://api.pubgtracker.com/v2/search/steam?steamId=${id}`,
@@ -37,7 +38,7 @@ class PubgTracker {
   }
 
   getStatsByNickname(nickname) {
-
+	if(!nickname || typeof nickname !== 'string') throw new Error('nickname is invalid')
     const options = {
       url: `https://api.pubgtracker.com/v2/profile/pc/${nickname}`,
       headers: {
