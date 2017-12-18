@@ -20,7 +20,7 @@ class PubgTracker {
     return new Promise((resolve, reject) => {
 
       const options = {
-        url: `https://pubgtracker.com/api/search?steamId=${id}`,
+        url: `https://api.pubgtracker.com/v2/search/steam?steamId=${id}`,
         headers: {
           'TRN-Api-Key': this.api_key
         },
@@ -45,7 +45,7 @@ class PubgTracker {
     return new Promise((resolve, reject) => {
 
       const options = {
-        url: `https://pubgtracker.com/api/profile/pc/${nickname}`,
+        url: `https://api.pubgtracker.com/v2/profile/pc/${nickname}`,
         headers: {
           'TRN-Api-Key': this.api_key
         },
